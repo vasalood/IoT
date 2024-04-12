@@ -1,0 +1,22 @@
+Realizovati sistem regulacije kvaliteta vazduha u zatvorenim prostorijama korišćenjem Arduino Mega 2560 i pomoćnih uređaja:
+1) TMP-36 analogni temperaturni senzor
+2) DHT22 - digitalni senzor za merenje relativne vlažnosti i temperature
+3) LCD displej LM-016L 
+4) crvena, žuta i zelena LED dioda
+5) taster
+6) servo motor
+   Proučiti: 
+      https://docs.arduino.cc/learn/electronics/servo-motors/
+      Zadnji deo prezentacije (samo za motor) - 5. Arduino COVID zastita SRF04 i TMP36; servo
+
+Svake 2 sekunde, vrši se čitanje temperature i vlažnosti sa oba senzora. 
+Ukoliko je razlika temperature ova dva senzora veca od 2 stepena, 
+pali se žuta dioda i na LCD displeju prikazuje poruka "Neslaganje temperatura!".  
+U suprotnom, ako je razlika temperatura manja od 2 stepena, računa se njihova srednja vrednost. 
+Ukoliko je srednja vrednost temperatura između 26 i 28 celzijusa, a realtivna vlažnost od 41 do 45%, 
+potrebno je aktivirati servo motor kojim se otvara prozor (u trajanju od 0.5 sekundi - proizvoljan smer rotacije). 
+U tom slučaju se na LCD displeju štampa "Otvaranje prozora" i pali crvena LED dioda.  
+Konačno, ako su i temperatura i vlažnost uspešno izmereni, a nisu u datom opsegu, 
+pali se zelena LED dioda i štampa poruka "OK". Prekidom koji se aktivira pristiskom tastera, 
+sistem prelazi u neaktivno stanje (ne meri temperaturu i vlažnost, ugašene LED diode, LCD ispisuje "Standby"), 
+a ponovnim pritiskom se aktivira.
