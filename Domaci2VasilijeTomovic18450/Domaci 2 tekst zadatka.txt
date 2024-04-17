@@ -1,0 +1,11 @@
+Realizovati jednostavnu igru provere refleksa dva igrača uz pomoć Arduino Mega 2560.
+
+Sistem se sastoji od dva tastera, po jedan za svakog od igrača.
+
+Kao pomoćne komponente, koriste se LCD displej i jedna LED dioda.
+
+Igra se realizuje kroz runde, svaka traje najviše 10 sekundi. Na početku runde se nakon nasumičnog broja sekundi pali dioda. Igrač koji prvi pritisne taster nakon paljenja diode, dobija 1 poen. Poeni se prikazuju u različitim redovima LCD displeja.
+
+Osim toga, dodati i taster koji resetuje broj poena igrača.
+
+Funkcionalnosti tastera realizovati uz pomoć prekida, a vreme meriti (poželjno) tajmerom.
