@@ -1,0 +1,23 @@
+Realizovati jednostavnu igru bacanja kocke za dva igrača - pobeđuje onaj ko dobije veći broj.
+
+Ishod bacanja kocke predstaviti uz pomoć 6 LED dioda. Ishod bacanja treba da bude nasumičan.
+
+Sistem sadrži jedan tastera koji preko interapta restartuje rezultate.
+
+Kao pomoćne komponente, koriste se LCD displej i jedan SRF04 senzor blizine.
+
+Igra se odvija kroz naizmenične poteze igrača - prvo baca prvi, zatim drugi, pa se obračunava rezultat i prikazuje na LCD displeju.
+
+Potez igrača se aktivira kada igrač prođe rukom iznad SRF04 senzora (rastojanje manje od 6cm aktivira potez).
+
+Na LCD displeju treba da izlaze odgovarajuće poruke: 
+
+1.Potez prvog igrača
+
+2. Potez drugog igrača
+
+3. Rezultat stoji po završetku runde 5 sekundi u obliku: 
+
+Prvi: X
+
+Drugi: Y
